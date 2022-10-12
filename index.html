@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  <style>
+  .header {
+    padding: 20px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 15px;}
+    </style>
+
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/RichBren/Vis2/main/2_symbol_map/css/style.css" media="all">
+</head>
+<div class="header">
+    <h1>World Corruption Index</h1>
+  </div>
+
+<body>
+  
+<div id="symbol_map"></div>
+
+<script type="text/javascript">
+
+  var spec1 = "https://raw.githubusercontent.com/RichBren/Vis2/main/2_symbol_map/js/CostOfLivingVis.json";
+  vegaEmbed('#symbol_map', spec1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+</body>
+</html>
